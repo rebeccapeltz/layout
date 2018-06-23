@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["timeline"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var container = document.getElementById('css-timeline');
+            var chart = new google.visualization.Timeline(container);
+            var dataTable = new google.visualization.DataTable();
+        
+            dataTable.addColumn({ type: 'string', id: 'Description' });
+            dataTable.addColumn({ type: 'string', id: 'Value' });
+            dataTable.addColumn({ type: 'date', id: 'Start' });
+            dataTable.addColumn({ type: 'date', id: 'End' });
+        
+            dataTable.addRows([
+              [ 'Standard', 'HTML Only', new Date(1990, 0, 1), new Date(1995, 11, 31) ],
+              [ 'Standard', 'CSS 1', new Date(1996, 0, 1), new Date(1997, 11, 31) ],
+              [ 'Standard', 'CSS 2', new Date(1998, 0, 1), new Date(2009, 11, 31) ],
+              [ 'Standard', 'CSS 3', new Date(2010, 0, 1), new Date(2018, 11, 31) ],
+              [ 'Standard', 'Flexbox', new Date(2010, 0, 1), new Date(2018, 11, 31) ],
+              [ 'Standard', 'Grid', new Date(2012, 0, 1), new Date(2018, 11, 31) ],
+              [ 'Code', '<table>',        new Date(1990, 0, 2),  new Date(1995, 11, 31) ],
+              [ 'Code', 'height,', new Date(1996, 0, 2),  new Date(1997, 11, 31) ],
+              [ 'Code', 'display:table,float:left, clear:all, position:absolute', new Date(1998, 1, 2),  new Date(2009, 11, 31) ],
+              [ 'Code', 'display:flex',  new Date(2010, 0, 2),  new Date(2018, 11, 31) ],
+              [ 'Code', 'display:grid',  new Date(2012, 0, 2),  new Date(2018, 11, 31) ]]);
+        
+              var options = {
+      timeline: { colorByRowLabel: true },
+      backgroundColor: '#ffd'
+    };
+            chart.draw(dataTable,options);
+          }
+        </script>
+        
+      
+        <div id="css-timeline" style="height:500px;"></div>
+       
+    </body>
+</html>
