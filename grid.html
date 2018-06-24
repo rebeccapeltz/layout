@@ -12,19 +12,27 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
     <style>
         .grid-container {
             display: grid;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
             grid-template-columns: auto auto auto;
+        }
 
-            padding: 10px;
+        @media screen and (max-width: 992px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+            }
         }
 
         .grid-item {
             padding: 20px;
-            font-size: 30px;
             text-align: center;
+        }
+
+        .grid-item img {
+            width: 100%;
         }
     </style>
 </head>
@@ -32,20 +40,17 @@
 <body>
     <div class="grid-container">
         <div class="grid-item">
-            <img src="images/cherry_blossom.jpg" alt="Cherries"
-                style="width:100%">
+            <img src="images/cherry_blossom.jpg" alt="Cherries">
+            <h3>My Favorite Picture</h3>
         </div>
         <div class="grid-item">
-            <img src="images/cherry_blossom.jpg" alt="Cherries"
-                style="width:100%">
+            <img src="images/cherry_blossom.jpg" alt="Cherries">
+            <h3>My Favorite Picture</h3>
         </div>
         <div class="grid-item">
-            <img src="images/cherry_blossom.jpg" alt="Cherries"
-                style="width:100%">
+            <img src="images/cherry_blossom.jpg" alt="Cherries">
+            <h3>My Favorite Picture</h3>
         </div>
-        <div class="grid-item">My Favorite Picture</div>
-        <div class="grid-item">My Favorite Picture</div>
-        <div class="grid-item">My Favorite Picture</div>
     </div>
 </body>
 
