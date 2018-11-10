@@ -12,26 +12,43 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
     <style>
         .description {
             width: 150px;
             height: 150px;
             margin: 8px;
             padding: 16px;
-            border-radius: 20%;
-
-
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 15px;
         }
 
         .card-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            justify-items: center;
+            display: flex;
+            flex-direction: column;
+        }
 
+        .w3-blue {
+            width: 80%;
+            margin: 30px 30px;
+        }
+
+        @media only screen and (min-width: 1085px) {
+            .description {
+                border-radius: 20%;
+            }
+            .card-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                justify-items: center;
+            }
+
+            .w3-blue {
+                width: 210px;
+                
+            }
         }
     </style>
 </head>
@@ -53,21 +70,21 @@
             </p>
         </div>
         <div class="w3-card-4 w3-blue description">
-                <p>
-                    <a href="float.html" target="_blank">float</a>
-                </p>
-            </div>
+            <p>
+                <a href="float.html" target="_blank">float</a>
+            </p>
+        </div>
         <div class="w3-card-4 w3-blue description">
             <p>
                 <a href="absolute.html" target="_blank">absolute</a>
             </p>
         </div>
         <div class="w3-card-4 w3-blue description">
-                <p>
-                    <a href="inline-block.html" target="_blank">inline-block</a>
-                </p>
-            </div>
-       
+            <p>
+                <a href="inline-block.html" target="_blank">inline-block</a>
+            </p>
+        </div>
+
         <div class="w3-card-4 w3-blue description">
             <p>
                 <a href="bootstrap4-grid-system.html" target="_blank">bootstrap4-grid-system</a>
@@ -92,7 +109,7 @@
 
     </div>
 
-    
+
 </body>
 
 </html>
